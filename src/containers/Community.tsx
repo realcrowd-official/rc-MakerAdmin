@@ -1,7 +1,7 @@
 import React from "react";
 
-const Community = () => {
-  return <div>Community</div>;
-};
-
-export default Community;
+export default class Community extends React.Component {
+  render() {
+    return <div>Community</div>;
+  }
+}

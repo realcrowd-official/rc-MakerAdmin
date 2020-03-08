@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Profile from "./containers/Profile";
 import Order from "./containers/Order";
 import Community from "./containers/Community";
+import Projects from "./containers/Projects";
 
 import BasicLayout from "./layout/BasicLayout";
 
@@ -13,8 +14,9 @@ const App = () => {
       <Router>
         <BasicLayout />
         <Route exact path="/" component={Profile} />
-        <Route path="/order" component={Order} />
         <Route path="/community" component={Community} />
+        <Route path="/projects/list" component={Projects} />
+        <Route path="/projects/order" component={Order} />
       </Router>
     </div>
   );

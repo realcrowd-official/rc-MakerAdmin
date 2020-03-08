@@ -3,13 +3,18 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 
-const BasicLayout = () => {
-  return (
-    <>
-      <Header />
-      <Navbar />
-    </>
-  );
-};
+interface BasicLayoutProps {
+  // headerTitle?: string;
+  // headerSubtitle?: string;
+}
 
-export default BasicLayout;
+export default class BasicLayout extends React.Component<BasicLayoutProps> {
+  render() {
+    return (
+      <>
+        <Navbar />
+        <Header />
+      </>
+    );
+  }
+}

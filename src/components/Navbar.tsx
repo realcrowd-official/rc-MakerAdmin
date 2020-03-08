@@ -1,17 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { Menu } from "antd";
-import {
-  LineChartOutlined,
-  UserOutlined,
-  TeamOutlined,
-  SettingOutlined
-} from "@ant-design/icons";
+import { UserOutlined, TeamOutlined, ProjectOutlined } from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 
-class Navbar extends Component {
+export default class Navbar extends React.Component {
   state = {
     current: "profile"
   };
@@ -34,10 +29,6 @@ class Navbar extends Component {
           <UserOutlined />
           <Link to="/">내 프로필</Link>
         </Menu.Item>
-        <Menu.Item key="order">
-          <LineChartOutlined />
-          <Link to="/order">리워드 배송</Link>
-        </Menu.Item>
         <Menu.Item key="community">
           <TeamOutlined />
           <Link to="/community">커뮤니티</Link>
@@ -45,23 +36,19 @@ class Navbar extends Component {
         <SubMenu
           title={
             <span className="submenu-title-wrapper">
-              <SettingOutlined />
-              Navigation Three - Submenu
+              <ProjectOutlined />
+              프로젝트
             </span>
           }
         >
-          <Menu.ItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
-          </Menu.ItemGroup>
-          <Menu.ItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
-          </Menu.ItemGroup>
+          <Menu.Item key="projects">
+            <Link to="/projects/list">프로젝트 목록</Link>
+          </Menu.Item>
+          <Menu.Item key="order">
+            <Link to="/projects/order">주문 확인하기</Link>
+          </Menu.Item>
         </SubMenu>
       </Menu>
     );
   }
 }
-
-export default Navbar;

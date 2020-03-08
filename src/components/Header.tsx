@@ -1,14 +1,19 @@
 import React from "react";
 import { PageHeader } from "antd";
 
-const Header = () => {
-  return (
-    <PageHeader
-      className="site-page-header"
-      title="Title"
-      subTitle="This is a subtitle"
-    />
-  );
-};
+interface HeaderProps {
+  // title?: string;
+  // subtitle?: string;
+}
 
-export default Header;
+export default class Header extends React.Component<HeaderProps> {
+  render() {
+    return (
+      <PageHeader
+        className="site-page-header"
+        title="Title"
+        subTitle="Subtitle"
+      />
+    );
+  }
+}
