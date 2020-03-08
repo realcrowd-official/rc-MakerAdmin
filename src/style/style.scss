@@ -1,4 +1,8 @@
-@charset "UTF-8";
-
 @import "./modules/normalize.scss";
+
+@import "./modules/theme.scss";
 @import "./modules/global.scss";
+@import "./modules/spoqa.scss";
+
+@import "./components/Header.scss";
+@import "./components/Navbar.scss";

@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import "./ant.less";
+import "./style/style.scss";
 
 import Profile from "./containers/Profile";
 import Order from "./containers/Order";

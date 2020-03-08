@@ -1,17 +1,6 @@
-@mixin font-settings() {
-  direction: ltr;
-  -webkit-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-text-decoration-skip: ink;
-}
-
 body {
   font-family: "Spoqa Han Sans", Sans-serif;
   margin: 0 auto;
-  @include font-settings();
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
