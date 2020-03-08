@@ -1,0 +1,71 @@
+@mixin font-settings() {
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-decoration-skip: ink;
+}
+
+body {
+  font-family: "Spoqa Han Sans", Sans-serif;
+  margin: 0 auto;
+  @include font-settings();
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  button {
+    padding: 0px;
+    cursor: pointer;
+    border: none !important;
+    outline: none !important;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+
+    &:focus,
+    &:active {
+      border: none !important;
+      outline: none !important;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+      -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    }
+  }
+
+  input:focus,
+  select:focus,
+  button:focus,
+  textarea:focus {
+    border: none !important;
+    outline: none !important;
+
+    &::-ms-clear,
+    &::-ms-reveal {
+      display: none !important;
+    }
+
+    &::-webkit-contacts-auto-fill-button,
+    &::-webkit-credentials-auto-fill-button {
+      right: 0;
+      position: absolute;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      display: none !important;
+    }
+  }
+}
+
+li:focus {
+  outline: none !important;
+}
